@@ -1064,6 +1064,17 @@ const App = () => {
                     ? "Accede a tu zona privada: resultados, entrenamientos, tiempos y más."
                     : "Sartu zure zona pribatura: emaitzak, entrenamenduak, denborak eta gehiago."}
                 </p>
+	        <div className="flex justify-center mb-8">
+                  <a
+                    href="https://swin-frontend.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-[#00A63E] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#008a34] transition-colors shadow-lg"
+                  >
+                    <ShoppingCart className="w-5 h-5 mr-2" />
+                    {language === "es" ? "Ir a la zona privada" : "Joan gune pribatura"}
+                  </a>
+                </div>
       
                 {/* 🔥 IFRAME DE SWIN */}
                 <div className="border rounded-lg overflow-hidden bg-gray-50 h-[700px] shadow-inner">
