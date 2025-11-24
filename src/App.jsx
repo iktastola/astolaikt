@@ -197,6 +197,7 @@ const App = () => {
       imageUse: "Uso de imágenes y redes sociales",
       cookies: "Cookies",
       lastUpdate: "Última actualización: octubre 2025",
+      zonaPrivada: "Zona Privada",
     },
     eu: {
       hasiera: "Hasiera",
@@ -282,6 +283,7 @@ const App = () => {
       imageUse: "Irudi eta sare sozialen erabilera",
       cookies: "Cookieak",
       lastUpdate: "Azken eguneratzea: Urria 2025",
+      zonaPrivada: "Gune Pribatua",
     },
   };
 
@@ -548,6 +550,7 @@ const App = () => {
     "horarios",
     "enlaces",
     "tienda",
+    "zona-privada",
     "redes",
     "calendario",
     "contacto",
@@ -600,13 +603,15 @@ const App = () => {
                           ? t.enlaces
                           : section === "tienda"
                             ? t.tienda
-                            : section === "redes"
-                              ? t.redes
-                              : section === "calendario"
-                                ? t.calendario
-                                : section === "aviso-legal"
-                                  ? t.avisoLegal
-                                  : t.contacto}
+                            : section === "zona-privada"
+                              ? t.zonaPrivada
+                              : section === "redes"
+                                ? t.redes
+                                : section === "calendario"
+                                  ? t.calendario
+                                  : section === "aviso-legal"
+                                    ? t.avisoLegal
+                                    : t.contacto}
                 </button>
               ))}
             </nav>
@@ -737,13 +742,15 @@ const App = () => {
                         ? t.enlaces
                         : section === "tienda"
                           ? t.tienda
-                          : section === "redes"
-                            ? t.redes
-                            : section === "calendario"
-                              ? t.calendario
-                              : section === "aviso-legal"
-                                ? t.avisoLegal
-                                : t.contacto}
+                          : section === "zona-privada"
+                            ? t.zonaPrivada
+                            : section === "redes"
+                              ? t.redes
+                              : section === "calendario"
+                                ? t.calendario
+                                : section === "aviso-legal"
+                                  ? t.avisoLegal
+                                  : t.contacto}
               </button>
             ))}
           </div>
@@ -1026,6 +1033,53 @@ const App = () => {
                   {language === "es"
                     ? "Si no ves la tienda, haz clic en el botón de arriba."
                     : "Denda ez bada ikusten, egin klik goiko botoian."}
+                </p>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
+
+      {activeSection === "zona-privada" && (
+        <>
+          <SEO
+            title={language === "es" ? "Zona Privada" : "Zona Pribatua"}
+            description={
+              language === "es"
+                ? "Acceso privado para nadadores y entrenadores del Club Astola I.K.T."
+                : "Astola I.K.T. klubeko igerilari eta entrenatzaileentzako sarbide pribatua."
+            }
+          />
+      
+          <section className="py-16 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="bg-white bg-opacity-90 rounded-lg p-8 shadow-lg">
+                
+                <h2 className="text-3xl font-bold text-center text-gray-900 mb-6">
+                  {language === "es" ? "Zona Privada" : "Zona Pribatua"}
+                </h2>
+      
+                <p className="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
+                  {language === "es"
+                    ? "Accede a tu zona privada: resultados, entrenamientos, tiempos y más."
+                    : "Sartu zure zona pribatura: emaitzak, entrenamenduak, denborak eta gehiago."}
+                </p>
+      
+                {/* 🔥 IFRAME DE SWIN */}
+                <div className="border rounded-lg overflow-hidden bg-gray-50 h-[700px] shadow-inner">
+                  <iframe
+                    src="https://swin-frontend.vercel.app/"
+                    title="Zona Privada - Swin"
+                    className="w-full h-full"
+                    style={{ border: "none" }}
+                    loading="lazy"
+                  />
+                </div>
+      
+                <p className="text-center text-sm text-gray-500 mt-4">
+                  {language === "es"
+                    ? "Si no se carga correctamente, abre el enlace en otra pestaña."
+                    : "Ondo ez bada kargatzen, ireki esteka beste fitxa batean."}
                 </p>
               </div>
             </div>
