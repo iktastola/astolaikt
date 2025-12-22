@@ -60,11 +60,11 @@ const AllNewsSection = ({
 
                     {/* Image */}
                     {selectedNews.data.imagen_principal && selectedNews.data.imagen_principal.url && (
-                        <div className="w-full h-64 md:h-96 overflow-hidden">
+                        <div className="w-full flex justify-center bg-gray-50">
                             <img
                                 src={selectedNews.data.imagen_principal.url}
                                 alt={selectedNews.data.imagen_principal.alt || ""}
-                                className="w-full h-full object-cover"
+                                className="max-w-full h-auto max-h-[85vh] object-contain"
                             />
                         </div>
                     )}
