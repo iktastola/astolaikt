@@ -53,7 +53,7 @@ export const getClubInfo = (t) => ({
 export const getTrainingSchedule = (language) => [
     {
         group: "Prebenjamin/Benjamín",
-        age: language === "es" ? "2017/2016" : "2017/2016",
+        age: language === "es" ? "2018/2017/2016" : "2018/2017/2016",
         schedule:
             language === "es"
                 ? ["Martes, Jueves 17:30-18:30"]
