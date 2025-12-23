@@ -45,7 +45,7 @@ export const getClubInfo = (t) => ({
     slogan: t.swimmingSince,
     description: t.clubDescription,
     values: t.values,
-    instagram: "https://www.instagram.com/astola.it/",
+    instagram: "https://www.instagram.com/astola.ikt/",
     facebook: "https://www.facebook.com/profile.php?id=61561550206896&locale=es_ES",
     tiktok: "https://www.tiktok.com/@astola.igeriketa.taldea",
 });

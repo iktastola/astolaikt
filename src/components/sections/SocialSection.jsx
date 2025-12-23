@@ -37,7 +37,7 @@ const SocialSection = ({ t, language, socialMediaTab, setSocialMediaTab }) => {
                                     className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-colors"
                                 >
                                     <Instagram className="w-5 h-5 mr-2" />
-                                    @astola.it
+                                    @astola.ikt
                                 </a>
                                 <a
                                     href={clubInfo.facebook}

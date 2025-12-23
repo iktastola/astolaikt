@@ -77,7 +77,7 @@ const ContactSection = ({ t, language }) => {
                                             rel="noopener noreferrer"
                                             className="text-purple-600 hover:text-purple-700 font-medium"
                                         >
-                                            @astola.it
+                                            @astola.ikt
                                         </a>
                                     </div>
                                     <div className="flex items-center">
