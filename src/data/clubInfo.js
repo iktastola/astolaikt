@@ -52,19 +52,18 @@ export const getClubInfo = (t) => ({
 
 export const getTrainingSchedule = (language) => [
     {
-        group: "Benjamín",
-        age: language === "es" ? "2017/2016/2015" : "2017/2016/2015",
+        group: "Prebenjamin/Benjamín",
+        age: language === "es" ? "2017/2016" : "2017/2016",
         schedule:
             language === "es"
-                ? ["Lunes, Miércoles 17:00-18:00", "Martes, Jueves 18:30-19:30"]
+                ? ["Martes, Jueves 17:30-18:30"]
                 : [
-                    "Astelehena, Asteazkena 17:00-18:00",
-                    "Asteartea, Osteguna 18:30-19:30",
+                    "Asteartea, Osteguna 17:30-18:30",
                 ],
     },
     {
-        group: "Alevín",
-        age: language === "es" ? "2014/2013" : "2014/2013",
+        group: "Benjamín/Alevín",
+        age: language === "es" ? "2015/2014/2013" : "2015/2014/2013",
         schedule:
             language === "es"
                 ? ["Lunes, Miércoles 17:00-18:00", "Martes, Jueves 18:30-19:30"]
