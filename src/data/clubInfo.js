@@ -74,7 +74,7 @@ export const getTrainingSchedule = (language) => [
     },
     {
         group: "G3",
-        age: language === "es" ? "2010/2011/2012" : "2010/2011/2012",
+        age: language === "es" ? "2012/2011/2010" : "2012/2011/2010",
         schedule:
             language === "es"
                 ? ["Lunes, Miércoles 17:00-18:00", "Martes, Jueves 18:30-19:30"]
