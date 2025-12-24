@@ -145,7 +145,7 @@ export const mainNavItems = [
     "horarios",
     "enlaces",
     "tienda",
-    "zona-privada",
+    "zonaPrivada",
     "redes",
     "calendario",
     "contacto",

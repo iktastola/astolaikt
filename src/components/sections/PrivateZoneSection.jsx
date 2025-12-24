@@ -24,7 +24,7 @@ const PrivateZoneSection = ({ language }) => {
                         <p className="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
                             {language === "es"
                                 ? "Accede a tu zona privada: resultados, entrenamientos, tiempos y más."
-                                : "Sartu zure zona pribatura: emaitzak, entrenamenduak, denborak eta gehiago."}
+                                : "Sartu zure gune pribatua: emaitzak, entrenamenduak, denborak eta gehiago."}
                         </p>
                         <div className="flex justify-center mb-8">
                             <a
@@ -36,7 +36,7 @@ const PrivateZoneSection = ({ language }) => {
                                 <ShoppingCart className="w-5 h-5 mr-2" />
                                 {language === "es"
                                     ? "Ir a la zona privada"
-                                    : "Joan gune pribatura"}
+                                    : "Joan gune pribatua"}
                             </a>
                         </div>
 
@@ -48,7 +48,9 @@ const PrivateZoneSection = ({ language }) => {
                                 className="w-full h-full"
                                 style={{ border: "none" }}
                                 loading="lazy"
-                            />
+                                sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            ></iframe>
                         </div>
 
                         <p className="text-center text-sm text-gray-500 mt-4">
