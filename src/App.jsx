@@ -108,7 +108,7 @@ const App = () => {
       {activeSection === "tienda" && <StoreSection t={t} language={language} />}
 
       {/* Zona Privada Section */}
-      {activeSection === "zona-privada" && (
+      {activeSection === "zonaPrivada" && (
         <PrivateZoneSection language={language} />
       )}
 

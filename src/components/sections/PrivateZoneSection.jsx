@@ -6,7 +6,7 @@ const PrivateZoneSection = ({ language }) => {
     return (
         <>
             <SEO
-                title={language === "es" ? "Zona Privada" : "Zona Pribatua"}
+                title={language === "es" ? "Zona Privada" : "Gune Pribatua"}
                 description={
                     language === "es"
                         ? "Acceso privado para nadadores y entrenadores del Club Astola I.K.T."
@@ -18,7 +18,7 @@ const PrivateZoneSection = ({ language }) => {
                 <div className="max-w-7xl mx-auto">
                     <div className="bg-white bg-opacity-90 rounded-lg p-8 shadow-lg">
                         <h2 className="text-3xl font-bold text-center text-gray-900 mb-6">
-                            {language === "es" ? "Zona Privada" : "Zona Pribatua"}
+                            {language === "es" ? "Zona Privada" : "Gune Pribatua"}
                         </h2>
 
                         <p className="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
