@@ -6,6 +6,7 @@ import { getStoredValue, setStoredValue } from "./utils/storage";
 import Header from "./components/Header";
 import MobileMenu from "./components/MobileMenu";
 import Footer from "./components/Footer";
+import WhatsAppWidget from "./components/WhatsAppWidget";
 
 // Sections
 import HeroSection from "./components/sections/HeroSection";
@@ -140,6 +141,9 @@ const App = () => {
         language={language}
         setActiveSection={setActiveSection}
       />
+
+      {/* Widget flotante de WhatsApp */}
+      <WhatsAppWidget />
     </div>
   );
 };
