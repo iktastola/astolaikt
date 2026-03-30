@@ -1,10 +1,11 @@
 import React from "react";
 import SEO from "../SEO";
 import { Star, User } from "lucide-react";
-import { getStaff } from "../../data/clubInfo";
+import { getStaff, getBoard } from "../../data/clubInfo";
 
 const ClubSection = ({ t, language }) => {
     const staff = getStaff(language);
+    const board = getBoard(language);
 
     return (
         <>
@@ -58,12 +59,31 @@ const ClubSection = ({ t, language }) => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="text-center">
+                        <div className="text-center mb-16">
                             <h3 className="text-2xl font-semibold text-gray-900 mb-8">
                                 {t.technicalTeam}
                             </h3>
-                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
                                 {staff.map((member, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-white p-6 rounded-lg shadow-md border"
+                                    >
+                                        <User className="w-12 h-12 text-[#00A63E] mx-auto mb-4" />
+                                        <h4 className="font-semibold text-gray-900">
+                                            {member.name}
+                                        </h4>
+                                        <p className="text-[#00A63E] text-sm">{member.role}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="text-center">
+                            <h3 className="text-2xl font-semibold text-gray-900 mb-8">
+                                {t.boardOfDirectors}
+                            </h3>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                {board.map((member, index) => (
                                     <div
                                         key={index}
                                         className="bg-white p-6 rounded-lg shadow-md border"
