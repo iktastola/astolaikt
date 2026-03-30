@@ -95,6 +95,14 @@ export const getTrainingSchedule = (language) => [
 
 export const getStaff = (language) => [
     {
+        name: "Jokin Urkia Birichinaga",
+        role: language === "es" ? "Entrenador Principal" : "Entrenatzaile Nagusia",
+        experience: "",
+    },
+];
+
+export const getBoard = (language) => [
+    {
         name: "Junkal Igartua Fernandez",
         role: language === "es" ? "Presidente" : "Lehendakaria",
         experience: "",
@@ -132,11 +140,6 @@ export const getStaff = (language) => [
     {
         name: "Ainara Villarrubia Florenzano",
         role: language === "es" ? "Vocal" : "Bokala",
-        experience: "",
-    },
-    {
-        name: "Jokin Urkia Birichinaga",
-        role: language === "es" ? "Entrenador Principal" : "Entrenatzaile Nagusia",
         experience: "",
     },
 ];
