@@ -139,7 +139,7 @@ export const translations = {
         emailAddress: "Posta elektronikoa",
         message: "Mezua",
         sendMessage: "Bidali Mezua",
-        swimmingSince: "2003tik aurrera maila bikainera igeritzen",
+        swimmingSince: "2003tik bikaintasunerantz igerian",
         summerCamps: "Udalekuak",
         masters: "Masterrak",
         basqueChampionship: "EH Txapelketa",
