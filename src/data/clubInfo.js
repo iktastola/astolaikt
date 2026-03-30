@@ -95,12 +95,47 @@ export const getTrainingSchedule = (language) => [
 
 export const getStaff = (language) => [
     {
-        name: "Alfonso",
-        role: language === "es" ? "Presidente" : "Presidentea",
+        name: "Junkal Igartua Fernandez",
+        role: language === "es" ? "Presidente" : "Lehendakaria",
         experience: "",
     },
     {
-        name: "Jokin",
+        name: "Bakarne Delgado Gallastegi",
+        role: language === "es" ? "Vicepresidente" : "Lehendakariordea",
+        experience: "",
+    },
+    {
+        name: "Amaia Areitio Isasi",
+        role: language === "es" ? "Tesorera" : "Diruzaina",
+        experience: "",
+    },
+    {
+        name: "Pedro Maria Martín Hernández",
+        role: language === "es" ? "Secretario" : "Idazkaria",
+        experience: "",
+    },
+    {
+        name: "Gaizka Elexpe Aristorena",
+        role: language === "es" ? "Vocal" : "Bokala",
+        experience: "",
+    },
+    {
+        name: "Alfonso Castro Corchero",
+        role: language === "es" ? "Vocal" : "Bokala",
+        experience: "",
+    },
+    {
+        name: "Asier Gonzalez Conchas",
+        role: language === "es" ? "Vocal" : "Bokala",
+        experience: "",
+    },
+    {
+        name: "Ainara Villarrubia Florenzano",
+        role: language === "es" ? "Vocal" : "Bokala",
+        experience: "",
+    },
+    {
+        name: "Jokin Urkia Birichinaga",
         role: language === "es" ? "Entrenador Principal" : "Entrenatzaile Nagusia",
         experience: "",
     },
