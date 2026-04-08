@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { translations } from "./data/translations";
 import { getStoredValue, setStoredValue } from "./utils/storage";
+import { client } from "./prismicio";
 
 // Components
 import Header from "./components/Header";
@@ -47,6 +48,23 @@ const App = () => {
   useEffect(() => {
     setStoredValue("astola_socialMediaTab", socialMediaTab);
   }, [socialMediaTab]);
+
+  // Ruta /sorteo -> abre la noticia concreta de Prismic
+  useEffect(() => {
+    if (window.location.pathname.replace(/\/+$/, "") === "/sorteo") {
+      (async () => {
+        try {
+          const doc = await client.getByID(
+            "4e472f47-037d-49e1-aa96-77805a3faea3"
+          );
+          setSelectedNews(doc);
+          setActiveSection("noticias");
+        } catch (e) {
+          console.error("No se pudo cargar la noticia /sorteo", e);
+        }
+      })();
+    }
+  }, []);
 
   const t = translations[language];
 
