@@ -52,11 +52,21 @@ const App = () => {
   // Ruta /sorteo -> abre la noticia concreta de Prismic
   useEffect(() => {
     if (window.location.pathname.replace(/\/+$/, "") === "/sorteo") {
+      const TARGET = "4e472f47-037d-49e1-aa96-77805a3faea3";
       (async () => {
         try {
-          const doc = await client.getByID(
-            "4e472f47-037d-49e1-aa96-77805a3faea3"
+          const all = await client.getAllByType("news");
+          console.log(
+            "[/sorteo] noticias disponibles:",
+            all.map((d) => ({ id: d.id, uid: d.uid, title: d.data?.title }))
           );
+          const doc =
+            all.find((d) => d.id === TARGET) ||
+            all.find((d) => d.uid === TARGET);
+          if (!doc) {
+            console.error("[/sorteo] no se encontró doc con id/uid", TARGET);
+            return;
+          }
           setSelectedNews(doc);
           setActiveSection("noticias");
         } catch (e) {
