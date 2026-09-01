@@ -54,10 +54,10 @@ const LegalSection = ({ t, language }) => {
                                 <p>
                                     <strong>{t.email}:</strong>{" "}
                                     <a
-                                        href="mailto:astolait@gamail.com"
+                                        href="mailto:astolait@gmail.com"
                                         className="text-blue-600"
                                     >
-                                        astolait@gamail.com
+                                        astolait@gmail.com
                                     </a>
                                 </p>
                                 <p>
@@ -111,10 +111,10 @@ const LegalSection = ({ t, language }) => {
                                 <p className="mt-2">
                                     Para ejercer estos derechos, envía un correo a{" "}
                                     <a
-                                        href="mailto:astolait@gamail.com"
+                                        href="mailto:astolait@gmail.com"
                                         className="text-blue-600"
                                     >
-                                        astolait@gamail.com
+                                        astolait@gmail.com
                                     </a>{" "}
                                     indicando el derecho que deseas ejercer.
                                 </p>
@@ -161,10 +161,10 @@ const LegalSection = ({ t, language }) => {
                                     Si no deseas que tu imagen o la de tus hijos/as aparezca,
                                     puedes solicitar su retirada escribiendo a{" "}
                                     <a
-                                        href="mailto:astolait@gamail.com"
+                                        href="mailto:astolait@gmail.com"
                                         className="text-blue-600"
                                     >
-                                        astolait@gamail.com
+                                        astolait@gmail.com
                                     </a>
                                     . En caso de menores de edad, el club recabará, cuando
                                     corresponda, la autorización de sus progenitores o tutores.
@@ -190,10 +190,10 @@ const LegalSection = ({ t, language }) => {
                                     Para cualquier duda relacionada con este aviso o con la
                                     política de privacidad, puedes escribir a{" "}
                                     <a
-                                        href="mailto:astolait@gamail.com"
+                                        href="mailto:astolait@gmail.com"
                                         className="text-blue-600"
                                     >
-                                        astolait@gamail.com
+                                        astolait@gmail.com
                                     </a>{" "}
                                     o dirigirte por escrito a Astola I.K.T. Abadiño, Eulena 2,
                                     48220 Abadiño (Bizkaia).
