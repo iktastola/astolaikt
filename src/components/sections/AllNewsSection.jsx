@@ -63,7 +63,9 @@ const AllNewsSection = ({
                         <div className="w-full flex justify-center bg-gray-50">
                             <img
                                 src={selectedNews.data.imagen_principal.url}
-                                alt={selectedNews.data.imagen_principal.alt || ""}
+                                alt={selectedNews.data.imagen_principal.alt || "Imagen de la noticia"}
+                                loading="lazy"
+                                decoding="async"
                                 className="max-w-full h-auto max-h-[85vh] object-contain"
                             />
                         </div>
@@ -150,7 +152,9 @@ const AllNewsSection = ({
                                     <div className="h-48 overflow-hidden">
                                         <img
                                             src={doc.data.imagen_principal.url}
-                                            alt={doc.data.imagen_principal.alt || ""}
+                                            alt={doc.data.imagen_principal.alt || "Imagen de la noticia"}
+                                            loading="lazy"
+                                            decoding="async"
                                             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                                         />
                                     </div>

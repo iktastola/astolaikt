@@ -119,6 +119,8 @@ const SocialSection = ({ t, language, socialMediaTab, setSocialMediaTab }) => {
                                             <img
                                                 src={category.image}
                                                 alt={category.name}
+                                                loading="lazy"
+                                                decoding="async"
                                                 className="w-full aspect-square object-cover rounded-lg"
                                             />
                                             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 rounded-lg flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 p-4">

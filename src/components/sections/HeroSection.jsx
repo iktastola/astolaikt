@@ -48,6 +48,8 @@ const HeroSection = ({
                     <img
                         src={piscina}
                         alt="Piscina Astola"
+                        loading="eager"
+                        decoding="async"
                         className="w-full h-full object-cover"
                         style={{ objectPosition: "center 58%" }}
                     />

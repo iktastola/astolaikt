@@ -15,6 +15,8 @@ const Footer = ({ t, language, setActiveSection }) => {
                             <img
                                 src={logoabadino2}
                                 alt="Astola I.K.T. Abadiño"
+                                loading="lazy"
+                                decoding="async"
                                 className="w-12 h-12 object-contain"
                             />
                         </div>
@@ -82,16 +84,12 @@ const Footer = ({ t, language, setActiveSection }) => {
                         </a>
                     </div>
                     <div className="mb-4">
-                        <a
-                            href="#"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                setActiveSection("aviso-legal");
-                            }}
+                        <button
+                            onClick={() => setActiveSection("aviso-legal")}
                             className="text-gray-400 hover:text-white transition-colors"
                         >
                             {t.avisoLegal}
-                        </a>
+                        </button>
                     </div>
                     <div className="text-gray-500 text-sm">
                         © {new Date().getFullYear()} Astola I.K.T. Abadiño.{" "}

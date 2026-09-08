@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const WhatsAppWidget = () => {
+const WhatsAppWidget = ({ t }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     // Número de WhatsApp (sin espacios ni signos)
@@ -41,7 +41,7 @@ const WhatsAppWidget = () => {
                 <span
                     className={`whatsapp-tooltip ${isHovered ? 'whatsapp-tooltip-visible' : ''}`}
                 >
-                    ¿Hablamos?
+                    {t?.whatsappTooltip ?? "¿Hablamos?"}
                 </span>
             </a>
 

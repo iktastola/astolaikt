@@ -25,6 +25,8 @@ const Header = ({
                             <img
                                 src={logoabadino}
                                 alt="Astola I.K.T. Abadiño"
+                                loading="eager"
+                                decoding="async"
                                 className="w-12 h-12 object-contain"
                             />
                         </div>
@@ -56,6 +58,9 @@ const Header = ({
                     {/* Mobile menu button */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+                        aria-expanded={isMobileMenuOpen}
+                        aria-controls="mobile-menu"
                         className="md:hidden p-2 text-gray-700 hover:text-[#00A63E]"
                     >
                         <svg
@@ -85,6 +90,9 @@ const Header = ({
                         <div className="relative">
                             <button
                                 onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
+                                aria-label="Cambiar idioma"
+                                aria-expanded={isLanguageMenuOpen}
+                                aria-haspopup="menu"
                                 className="flex items-center space-x-1 text-gray-700 hover:text-[#00A63E] transition-colors"
                             >
                                 <Globe className="w-5 h-5" />
@@ -96,6 +104,7 @@ const Header = ({
                             {isLanguageMenuOpen && (
                                 <div className="absolute right-0 mt-2 w-24 bg-white rounded-lg shadow-lg border z-50">
                                     <button
+                                        aria-label="Cambiar idioma a Español"
                                         onClick={() => {
                                             setLanguage("es");
                                             setIsLanguageMenuOpen(false);
@@ -105,6 +114,7 @@ const Header = ({
                                         Español
                                     </button>
                                     <button
+                                        aria-label="Hizkuntza Euskalduna aldatu"
                                         onClick={() => {
                                             setLanguage("eu");
                                             setIsLanguageMenuOpen(false);

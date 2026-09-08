@@ -33,6 +33,8 @@ const LinksSection = ({ t, language }) => {
                                     <img
                                         src={link.logo}
                                         alt={`${link.name} logo`}
+                                        loading="lazy"
+                                        decoding="async"
                                         className="w-8 h-8 mr-4 rounded"
                                     />
                                     <span className="text-gray-800 font-medium group-hover:text-[#00A63E]">

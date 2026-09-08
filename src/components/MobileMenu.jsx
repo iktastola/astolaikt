@@ -11,13 +11,15 @@ const MobileMenu = ({
     const clubInfo = getClubInfo(t);
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg border-b">
+        <div id="mobile-menu" className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg border-b">
             <div className="flex items-center justify-between p-4 border-b">
                 <div className="flex items-center space-x-3">
                     <div className="w-12 h-12 flex items-center justify-center">
                         <img
                             src={logoabadino}
                             alt="Astola I.K.T. Abadiño"
+                            loading="lazy"
+                            decoding="async"
                             className="w-12 h-12 object-contain"
                         />
                     </div>
@@ -28,6 +30,7 @@ const MobileMenu = ({
                 </div>
                 <button
                     onClick={() => setIsMobileMenuOpen(false)}
+                    aria-label="Cerrar menú"
                     className="text-gray-700 hover:text-[#00A63E]"
                 >
                     ✕
