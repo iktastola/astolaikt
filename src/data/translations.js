@@ -7,7 +7,12 @@ export const translations = {
         redes: "Redes",
         contacto: "Contacto",
         calendario: "Calendario",
-        enlaces: "Enlaces de interés",
+        colaboradores: "Colaboradores",
+        colaboradoresIntro:
+            "Gracias a quienes hacen posible que sigamos nadando.",
+        patrocinadores: "Patrocinadores",
+        nuestrosColaboradores: "Colaboradores",
+        colaboraConNosotros: "¿Quieres colaborar con el club? Escríbenos.",
         avisoLegal: "Aviso Legal",
         welcome: "Bienvenidos a",
         clubDescription:
@@ -94,7 +99,13 @@ export const translations = {
         redes: "Sare sozialak",
         contacto: "Kontaktua",
         calendario: "Egutegia",
-        enlaces: "Interes Estekak",
+        colaboradores: "Kolaboratzaileak",
+        colaboradoresIntro:
+            "Igerian jarraitzea ahalbidetzen dutenei esker.",
+        patrocinadores: "Babesleak",
+        nuestrosColaboradores: "Kolaboratzaileak",
+        colaboraConNosotros:
+            "Klubarekin kolaboratu nahi duzu? Idatzi iezaguzu.",
         avisoLegal: "Lege Oharra",
         welcome: "Ongi etorri",
         clubDescription:

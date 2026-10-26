@@ -179,7 +179,7 @@ export const mainNavItems = [
     "hasiera",
     "kluba",
     "horarios",
-    "enlaces",
+    "colaboradores",
     "tienda",
     "zonaPrivada",
     "redes",

@@ -13,7 +13,7 @@ import WhatsAppWidget from "./components/WhatsAppWidget";
 const HeroSection = lazy(() => import("./components/sections/HeroSection"));
 const ClubSection = lazy(() => import("./components/sections/ClubSection"));
 const ScheduleSection = lazy(() => import("./components/sections/ScheduleSection"));
-const LinksSection = lazy(() => import("./components/sections/LinksSection"));
+const ColaboradoresSection = lazy(() => import("./components/sections/ColaboradoresSection"));
 const StoreSection = lazy(() => import("./components/sections/StoreSection"));
 const PrivateZoneSection = lazy(() => import("./components/sections/PrivateZoneSection"));
 const SocialSection = lazy(() => import("./components/sections/SocialSection"));
@@ -130,9 +130,9 @@ const App = () => {
           <ScheduleSection t={t} language={language} />
         )}
 
-        {/* Enlaces de interés Section */}
-        {activeSection === "enlaces" && (
-          <LinksSection t={t} language={language} />
+        {/* Colaboradores Section */}
+        {activeSection === "colaboradores" && (
+          <ColaboradoresSection t={t} language={language} />
         )}
 
         {/* Tienda Section */}

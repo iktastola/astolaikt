@@ -9,10 +9,11 @@ import {
     Facebook,
     Music,
 } from "lucide-react";
-import { getClubInfo } from "../../data/clubInfo";
+import { getClubInfo, getInterestLinks } from "../../data/clubInfo";
 
 const ContactSection = ({ t, language }) => {
     const clubInfo = getClubInfo(t);
+    const interestLinks = getInterestLinks(t);
 
     return (
         <>
@@ -147,6 +148,34 @@ const ContactSection = ({ t, language }) => {
                                         {t.sendMessage}
                                     </button>
                                 </form>
+
+                                <div className="mt-8 pt-8 border-t border-gray-200">
+                                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                                        {t.interesLinks}
+                                    </h3>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        {interestLinks.map((link) => (
+                                            <a
+                                                key={link.name}
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors group"
+                                            >
+                                                <img
+                                                    src={link.logo}
+                                                    alt={`${link.name} logo`}
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    className="w-8 h-8 mr-3 rounded"
+                                                />
+                                                <span className="text-gray-800 text-sm font-medium group-hover:text-[#00A63E]">
+                                                    {link.name}
+                                                </span>
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
