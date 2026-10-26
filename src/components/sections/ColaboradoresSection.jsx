@@ -1,16 +1,70 @@
 import React from "react";
 import SEO from "../SEO";
-import { HeartHandshake, Building2, Coffee, Hotel, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import moratoLogo from "../../assets/astola_igeriketa_talea_asier_morato_logo.jpeg";
+import cafebaqueLogo from "../../assets/astola_igeriketa_talea_cafes_baque_logo.png";
+import urkiolaLogo from "../../assets/astola_igeriketa_talea_urkiola_hotela_logo.jpg";
+import abadinoLogo from "../../assets/astola_igeriketa_talea_abadino_udala_logo.gif";
 
 const patrocinadores = [
-    { name: "Asier Morato", icon: HeartHandshake },
-    { name: "Abadiño Udala", icon: Building2 },
+    {
+        name: "Asier Morato",
+        logo: moratoLogo,
+        url: "https://fontaneriaasiermorato.com/",
+    },
+    {
+        name: "Abadiño Udala",
+        logo: abadinoLogo,
+        url: "https://www.xn--abadio-0wa.org/",
+    },
 ];
 
 const colaboradores = [
-    { name: "Cafes Baque", icon: Coffee },
-    { name: "Urkiola Hotela", icon: Hotel },
+    {
+        name: "Café Baqué",
+        logo: cafebaqueLogo,
+        url: "https://www.baque.com/",
+    },
+    {
+        name: "Urkiola Hotela",
+        logo: urkiolaLogo,
+        url: "https://www.urkiola.eus/",
+    },
 ];
+
+const ColaboradorCard = ({ item }) => {
+    const cardClassName =
+        "bg-white p-6 rounded-lg shadow-md border flex flex-col items-center text-center transition-shadow";
+    const content = (
+        <>
+            <div className="h-24 flex items-center justify-center mb-4">
+                <img
+                    src={item.logo}
+                    alt={item.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="max-h-24 max-w-full object-contain"
+                />
+            </div>
+            <h4 className="font-semibold text-gray-900">{item.name}</h4>
+        </>
+    );
+
+    if (!item.url) {
+        return <div className={cardClassName}>{content}</div>;
+    }
+
+    return (
+        <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${cardClassName} hover:shadow-lg`}
+        >
+            {content}
+        </a>
+    );
+};
 
 const ColaboradoresSection = ({ t, language }) => {
     return (
@@ -39,18 +93,7 @@ const ColaboradoresSection = ({ t, language }) => {
                             </h3>
                             <div className="grid sm:grid-cols-2 gap-6">
                                 {patrocinadores.map((item) => (
-                                    <div
-                                        key={item.name}
-                                        className="bg-white p-6 rounded-lg shadow-md border flex flex-col items-center text-center"
-                                    >
-                                        {React.createElement(item.icon, {
-                                            className:
-                                                "w-12 h-12 text-[#00A63E] mb-4",
-                                        })}
-                                        <h4 className="font-semibold text-gray-900">
-                                            {item.name}
-                                        </h4>
-                                    </div>
+                                    <ColaboradorCard key={item.name} item={item} />
                                 ))}
                             </div>
                         </div>
@@ -61,18 +104,7 @@ const ColaboradoresSection = ({ t, language }) => {
                             </h3>
                             <div className="grid sm:grid-cols-2 gap-6">
                                 {colaboradores.map((item) => (
-                                    <div
-                                        key={item.name}
-                                        className="bg-white p-6 rounded-lg shadow-md border flex flex-col items-center text-center"
-                                    >
-                                        {React.createElement(item.icon, {
-                                            className:
-                                                "w-12 h-12 text-[#00A63E] mb-4",
-                                        })}
-                                        <h4 className="font-semibold text-gray-900">
-                                            {item.name}
-                                        </h4>
-                                    </div>
+                                    <ColaboradorCard key={item.name} item={item} />
                                 ))}
                             </div>
                         </div>
