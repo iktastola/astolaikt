@@ -5,8 +5,13 @@ import moratoLogo from "../../assets/astola_igeriketa_talea_asier_morato_logo.jp
 import cafebaqueLogo from "../../assets/astola_igeriketa_talea_cafes_baque_logo.png";
 import urkiolaLogo from "../../assets/astola_igeriketa_talea_urkiola_hotela_logo.jpg";
 import abadinoLogo from "../../assets/astola_igeriketa_talea_abadino_udala_logo.gif";
+import zuloagaMotorLogo from "../../assets/astola_igeriketa_talea_zuloaga_motor_logo.jpg";
 
 const patrocinadores = [
+    {
+        name: "Zuloaga Motor",
+        logo: zuloagaMotorLogo,
+    },
     {
         name: "Asier Morato",
         logo: moratoLogo,
@@ -32,9 +37,8 @@ const colaboradores = [
     },
 ];
 
-const ColaboradorCard = ({ item }) => {
-    const cardClassName =
-        "bg-white p-6 rounded-lg shadow-md border flex flex-col items-center text-center transition-shadow";
+const ColaboradorCard = ({ item, className = "" }) => {
+    const cardClassName = `bg-white p-6 rounded-lg shadow-md border flex flex-col items-center text-center transition-shadow ${className}`;
     const content = (
         <>
             <div className="h-24 flex items-center justify-center mb-4">
@@ -92,8 +96,17 @@ const ColaboradoresSection = ({ t, language }) => {
                                 {t.patrocinadores}
                             </h3>
                             <div className="grid sm:grid-cols-2 gap-6">
-                                {patrocinadores.map((item) => (
-                                    <ColaboradorCard key={item.name} item={item} />
+                                {patrocinadores.map((item, index) => (
+                                    <ColaboradorCard
+                                        key={item.name}
+                                        item={item}
+                                        className={
+                                            index === patrocinadores.length - 1 &&
+                                            patrocinadores.length % 2 === 1
+                                                ? "sm:col-span-2 sm:justify-self-center sm:w-[calc(50%_-_0.75rem)]"
+                                                : ""
+                                        }
+                                    />
                                 ))}
                             </div>
                         </div>
